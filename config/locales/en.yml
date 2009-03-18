@@ -1,0 +1,11 @@
+en:
+  authenticate_by_ldap : "Authenticate by LDAP?"
+  ldap :
+    host : "LDAP Host. Ex: ad.mydomain.intranet"
+    base : "LDAP Base. Ex: DC=mydomain,DC=intranet"
+    login_suffix : "LDAP login suffix. Ex: @mydomain.intranet"
+    search_key : "LDAP Search Key. Ex: sAMAccountName"
+  next: "Next"
+  previous: "Previous"
+  shoutts_x_page: "Shoutts per page"
+  time_ago: "{{time}} ago"

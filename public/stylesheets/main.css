@@ -1,0 +1,105 @@
+* {
+	padding:0;
+	margin:0px 0 0 0px;
+}
+
+body {
+	background:#ddd;
+	font-family: Helvetica, Tahoma, Verdana, sans-serif;
+}
+
+#bottomContainer {
+	margin-left:auto;
+	margin-right:auto;
+	width:708px;	
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	width:708px;
+	background:url(../images/container-background.jpg);
+}
+
+#menuContainer {
+	float:left;
+}
+
+#menuContainer a {
+	color:#989898;
+}
+
+#menuContainer a:hover {
+	color:#940205;
+}
+
+#newShoutt {
+	float:left;
+	font-size:16px;
+}
+
+#sendContainer {
+	float:right;
+	margin-right:26px;
+}
+
+#shouttsContainer {
+	margin-left:30px;
+	width:647px;
+	font-size:13px;	
+}
+
+#postContainer {
+	margin:25px 0 35px 30px;
+}
+
+#postContainer textarea {
+	font-size:14px;
+	height:45px;
+	margin:15px 0;
+	padding:6px 5px 0;
+	width:637px;
+}
+
+#textLeft {
+	float:right;
+	margin-right:30px;
+	color:#acacac;
+	font-size:16px;
+}
+
+#footerContainer {
+	font-size:11px;
+	margin:10px auto 20px auto;
+	text-align:center;
+	width:500px;
+}
+
+.shoutt {
+	width:540px;
+	margin-left:20px;
+	float:left;
+	overflow:hidden;
+}
+
+.shouttButton {
+	float:right;
+	margin-right:10px;
+}
+
+.shoutts {
+	width:647px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#e7e7e7;
+	padding:15px 0 20px 0;	
+}
+
+.shoutts:hover {
+	background:#fbfbfb;
+}
+
+.timeAgo {
+	font-size:11px;
+	color:#990000;
+}

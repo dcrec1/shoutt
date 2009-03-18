@@ -1,0 +1,13 @@
+<div class="shoutts">
+	<div class="shoutt" id="<%= shoutt.id %>">
+	  <strong class="user"><%=h shoutt.user.name %></strong>
+	  <%=h shoutt.body %>
+	  <span class="timeAgo"><%=h time_ago_in_words(shoutt.date) %></span>
+	</div>
+	<div class="shouttButton">
+	  <img src="images/reply-button.jpg" title="reply this" />
+	  <br />
+	  <img src="images/foward-button.jpg" title="foward" />
+	</div>
+	<br clear="all" />
+</div>

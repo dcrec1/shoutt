@@ -1,0 +1,2 @@
+<%= render :partial => 'shoutt', :collection => @shoutts %>
+<%= paginate(@shoutts).to_s.gsub('new', '') %>
