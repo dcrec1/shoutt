@@ -1,0 +1,10 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery-ui
+  - jrails
+  - application
+stylesheets: 
+- base: 
+  - main
