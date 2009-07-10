@@ -1,10 +1,14 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ShouttsController do
+
+  before :all do
+    load_shoutts
+  end
   
   before :each do
     login
-	load_config
+	  load_config
   end
 
   it "should create a shoutt when user is loggged" do
@@ -50,7 +54,6 @@ describe ShouttsController do
   describe "'new' action" do
     
     it "should render shoutts container" do
-      Shoutt.stub!(:find)
       controller.should_receive(:render).with(:partial => 'shoutts_container')
       get :new
     end
