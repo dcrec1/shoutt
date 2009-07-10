@@ -1,0 +1,45 @@
+set :application, "shoutt"
+set :repository,  "git://github.com/dcrec1/shoutt.git"
+set :use_sudo, false
+
+if ENV['env'].eql? 'production'
+  set :user, ""
+  set :domain, ""
+  set :deploy_to, ""
+else
+  set :user, ""
+  set :domain, ""
+  set :deploy_to, ""
+  set :rails_env, 'staging'
+end
+
+# If you aren't using Subversion to manage your source code, specify
+# your SCM below:
+set :scm, :git
+
+role :app, domain
+role :web, domain
+role :db,  domain, :primary => true
+
+#############################################################
+#	Passenger
+#############################################################
+
+namespace :deploy do
+  desc "Restarting mod_rails with restart.txt"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+  
+  desc "Create asset packages for production" 
+  task :after_update_code, :roles => [:web] do
+    run <<-EOF
+      cd #{release_path} && rake asset:packager:build_all
+    EOF
+  end
+ 
+  [:start, :stop].each do |t|
+    desc "#{t} task is a no-op with mod_rails"
+    task t, :roles => :app do ; end
+  end
+end
