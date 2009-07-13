@@ -9,3 +9,10 @@ en:
   previous: "Previous"
   shoutts_x_page: "Shoutts per page"
   time_ago: "{{time}} ago"
+  log_in: "Login"
+  password: "Password"
+  email: "Email"
+  password_confirmation: "Password Confirmation"
+  sign_up: "Sign up"
+  new_user_sign_up: "New User"
+
